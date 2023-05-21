@@ -1,2 +1,2 @@
 # Predict Bike Traffic
- Predicting bike traffic from social and environmental factors
+ Predicting bike traffic based on social and environmental factors
