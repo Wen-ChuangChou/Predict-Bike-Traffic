@@ -1,10 +1,10 @@
-## Predict Bike Traffic
+# Predict Bike Traffic
 
-# Task
+## Task
  Predicting bike traffic based on social and environmental factors
 
-# Dataset
+## Dataset
 
-# Model architecture
+## Model architecture
 
-# Results
+## Results
