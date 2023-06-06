@@ -13,7 +13,7 @@ In this project, data from three cities, namely two intermediate cities, Dresden
 
 ![image](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/bike_traffic_in_cities.png?raw=true)  
 
-The networks and types of streets were retreived from OpenStreetMap (OSM). The types of streets are categorized into 4 classes: cycleway, main street, residential street, and path. An example of a street network:
+The networks and types of streets were retreived from OpenStreetMap (OSM). The types of streets are categorized into 4 classes: cycleway, main street, residential street, and path. An example of a street network:  
 ![street netowkr](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/road_network.png?raw=true)  
 
 ## Model architecture
