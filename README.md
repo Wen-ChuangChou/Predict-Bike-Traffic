@@ -4,7 +4,7 @@
 Cycling is considered to be more environmentally sustainable than the use of private vehicles and offers greater flexibility and accessibility compared to public transportation. Additionally, rising fuel costs and public transportation fares have further incentivized individuals to turn to bicycles as a mode of transportation. To accommodate this shift in travel patterns, authorities are keen to understand which factors drive individuals to choose bicycle transportation, how urban development can generate new demand for cycling, and how to promote bicycle usage through strategies such as the installation of dedicated bike infrastructure.
 
 ## Task
- Predicting the volumn bike traffic based on social and environmental factors including residential density, amenity distribution, and street networks (length, connections, street types). 
+The task involves predicting the volume of bike traffic using features derived from a social and environmental dataset. These features include residential density, distribution of amenities, and characteristics of street networks (such as length, connections, and street types). 
 
 ## Dataset
 This [dataset](https://www.mcloud.de/web/guest/suche/-/results/suche/relevance/stadtradeln/0/detail/ECF9DF02-37DC-4268-B017-A7C2CF302006) contains cycling volumes recorded by users of the Stadtradeln app in Germany during a 3-week period in 2020 as part of the "Stadtradeln" campaign by Klima-Bündnis e.V. The data processing was conducted as part of the MOVEBIS research project at TU Dresden. The contribution is credited to "Grubitzsch P., Lißner S., Huber S., Springer T., [2021] Technische Universität Dresden, Professur für Rechnernetze und Professur für Verkehrsökologie". It is important to note that the absolute values are related to the number of participants in the cycling campaign, and the data does not represent the actual values of total bicycle users in cities as a whole.  
@@ -12,8 +12,14 @@ This [dataset](https://www.mcloud.de/web/guest/suche/-/results/suche/relevance/s
 In this project, data from three cities, namely two intermediate cities, Dresden and Leipzig, and one large city, Hamburg, were selected to train the model and predict bike traffic.  
 ![image](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/bike_traffic_in_cities.png?raw=true)  
 
-The networks and types of streets were retreived from OpenStreetMap (OSM). The types of streets are categorized into 4 classes: cycleway, main street, residential street, and path. An example of a street network:  
-![street netowkr](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/road_network.png?raw=true)  
+The networks and types of streets were retrieved from [OpenStreetMap](https://www.openstreetmap.org) (OSM). TThe street types are categorized into four classes: cycleway, main street, residential street, and path. Here is an example of a street network:  
+![street network](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/road_network.png?raw=true)  
+
+The residential density was approximated by considering the floor area of buildings within a buffer zone (30m) along the streets. Generally, larger buildings tend to accommodate more people. These data were calculated using the ground area of building footprints and the number of building levels, retrieved from [OSM](https://www.openstreetmap.org).The distribution of amenities, which includes economic and social facilities, was also downloaded from [OSM](https://www.openstreetmap.org), Amenities within a buffer zone (60m) along streets are considered to be accessible from the corresponding streets. The dataset includes the following tags for amenities from OSM:  
+"department_store", "general", "mall", "supermarket", "wholesale", "kiosk", "convenience", "variety_store", "health_food", "greengrocer", "butcher ", "pastry", "bakery", "ice_cream", "books", "stationery", "ticket", "copyshop"  "bag", "clothes", "shoes", "cosmetics", "doityourself", "hardware", "houseware", "bed", "carpet", "furniture", "interior_decoration", "computer", "electronics", "outdoor", "sports", "florist","garden_centre", "laundry", "pet", "toys", "biergarten", "cafe", "fast_food", "food_court", "ice_cream", "restaurant", "bar", "pub", "nightclub", "theatre", "cinema", "marketplace", "place_of_worship", "bank", "pharmacy", "chemist", "post_office", "townhall", "library","kindergarten", "school", "college" , "park", "playground", "stadium", "fitness_centre", "fitness_station", "pitch", "sports_centre", "university".
+
+Here is an example of a buffer zone (60m) along the streets:  
+![street network](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/amenities_buffer_zone.png?raw=true)  
 
 ## Model architecture
 
