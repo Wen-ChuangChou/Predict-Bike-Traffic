@@ -1,3 +1,5 @@
+Each street segment represents one node, and each node has a 43-dimensional feature vector that includes segment length, street type, floor area, and the number of amenities.
+![Uploading 圖片.png…]()
 # Predict Bike Traffic
 
 ## Motivation
@@ -15,24 +17,27 @@ In this project, data from three cities, namely two intermediate cities, Dresden
 The networks and types of streets were retrieved from [OpenStreetMap](https://www.openstreetmap.org) (OSM). TThe street types are categorized into four classes: cycleway, main street, residential street, and path. Here is an example of a street network:  
 ![street network](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/road_network.png?raw=true)  
 
-Generally, larger buildings tend to accommodate more people. Therefore, to estimate the residential density within a buffer zone (30m) along streets, I represented it with the total floor area of buildings, which is calculated from the size of building footprints and the respective levels retrieved from [OSM](https://www.openstreetmap.org). Specific keywords from the OSM classification hierarchy were utilized to identify the locations of amenities, encompassing economic and social facilities of interest. The numbers of individual amenities within a buffer zone (60m) were represented as feature vectors for those streets. The following tags (keywords) were employed to retrieve the distribution of amenities from [OSM](https://www.openstreetmap.org):  
+Generally, larger buildings tend to accommodate more people. Therefore, to estimate the residential density within a buffer zone (30m) along streets, I represented it with the total floor area of buildings, which is calculated from the size of building footprints and the respective levels retrieved from [OSM](https://www.openstreetmap.org). Specific keywords from the OSM classification hierarchy were utilized to identify the locations of amenities, encompassing economic and social facilities of interest. The numbers of individual amenities within a buffer zone (60m) of streets were represented as feature vectors for those streets. The following tags (keywords) were employed to retrieve the distribution of amenities from [OSM](https://www.openstreetmap.org):  
 "department_store", "general", "mall", "supermarket", "wholesale", "kiosk", "convenience", "variety_store", "health_food", "greengrocer", "butcher ", "pastry", "bakery", "ice_cream", "books", "stationery", "ticket", "copyshop"  "bag", "clothes", "shoes", "cosmetics", "doityourself", "hardware", "houseware", "bed", "carpet", "furniture", "interior_decoration", "computer", "electronics", "outdoor", "sports", "florist","garden_centre", "laundry", "pet", "toys", "biergarten", "cafe", "fast_food", "food_court", "ice_cream", "restaurant", "bar", "pub", "nightclub", "theatre", "cinema", "marketplace", "place_of_worship", "bank", "pharmacy", "chemist", "post_office", "townhall", "library","kindergarten", "school", "college" , "park", "playground", "stadium", "fitness_centre", "fitness_station", "pitch", "sports_centre", "university".
-
-
 
 Here is an example of a buffer zone (60m) along the streets:  
 ![street network](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/amenities_buffer_zone.png?raw=true)  
 
 ### Graph data
+Streets are interconnected, creating a graph-based data structure. For this project, each street segment is represented as a node, and each node is associated with a 43-dimensional feature vector. The feature vector includes segment length, street type, floor area, and the number of amenities. Intersections serve as edges, representing the connections between streets.
 
 ## Model architecture
+Because our data is structured as graphs containing multidimensional node features, graph neural networks (GNNs) was implemented, specifically Graph Attention Networks, as the basis of our model to predict bike traffic.
 
 ## Results
 
 ## Reference
-1. P. Grubitzsch .et al., Technische Universität Dresden, Professur für Rechnernetze und Professur für Verkehrsökologie, 2021
+1. P. Grubitzsch *et al.*, Technische Universität Dresden, Professur für Rechnernetze und Professur für Verkehrsökologie, 2021
 2. OpenStreetMap contributors. https://www.openstreetmap.org, 2023
-3. G. Boeing, “OSMnx: New methods for acquiring, constructing, analyzing, and visualizing complex street networks,” Computers, Environment and Urban Systems, vol. 65, pp. 126–139, Sep. 2017, doi: https://doi.org/10.1016/j.compenvurbsys.2017.05.004.
+3. G. Boeing, “OSMnx: New methods for acquiring, constructing, analyzing, and visualizing complex street networks,” *Computers, Environment and Urban Systems*, vol. 65, pp. 126–139, Sep. 2017, doi: https://doi.org/10.1016/j.compenvurbsys.2017.05.004.
+4. P. Veličković *et al.*, “Graph Attention Networks,” *arXiv*:1710.10903, Feb. 2018, https://arxiv.org/abs/1710.10903
+
+‌
 
 ‌
 
