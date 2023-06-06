@@ -10,7 +10,6 @@ Cycling is considered to be more environmentally sustainable than the use of pri
 This [dataset](https://www.mcloud.de/web/guest/suche/-/results/suche/relevance/stadtradeln/0/detail/ECF9DF02-37DC-4268-B017-A7C2CF302006) contains cycling volumes recorded by users of the Stadtradeln app in Germany during a 3-week period in 2020 as part of the "Stadtradeln" campaign by Klima-Bündnis e.V. The data processing was conducted as part of the MOVEBIS research project at TU Dresden. The contribution is credited to "Grubitzsch P., Lißner S., Huber S., Springer T., [2021] Technische Universität Dresden, Professur für Rechnernetze und Professur für Verkehrsökologie". It is important to note that the absolute values are related to the number of participants in the cycling campaign, and the data does not represent the actual values of total bicycle users in cities as a whole.  
   
 In this project, data from three cities, namely two intermediate cities, Dresden and Leipzig, and one large city, Hamburg, were selected to train the model and predict bike traffic.  
-
 ![image](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/bike_traffic_in_cities.png?raw=true)  
 
 The networks and types of streets were retreived from OpenStreetMap (OSM). The types of streets are categorized into 4 classes: cycleway, main street, residential street, and path. An example of a street network:  
