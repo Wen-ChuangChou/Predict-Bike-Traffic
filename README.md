@@ -21,6 +21,8 @@ The residential density was approximated by considering the floor area of buildi
 Here is an example of a buffer zone (60m) along the streets:  
 ![street network](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/amenities_buffer_zone.png?raw=true)  
 
+### Graph data
+
 ## Model architecture
 
 ## Results
