@@ -25,7 +25,7 @@ Here is an example of a buffer zone (60m) along the streets:
 Streets are interconnected, creating a graph-based data structure. For this project, each street segment is represented as a node, and each node is associated with a 43-dimensional feature vector. The feature vector includes segment length, street type, floor area, and the number of amenities. Intersections serve as edges, representing the connections between streets.
 
 ## Model architecture
-Because our data are structured as graphs containing multidimensional node features, a graph neural network (GNN) were implemented, specifically a Graph Attention Network, as the basis of our model to predict bike traffic. This GNN is included in the PyTorch Geometric library, which is designed for training and evaluating models on graph-structured data.
+Because our data are structured as graphs containing multidimensional node features, a graph neural network (GNN) were implemented, specifically a Graph Attention Network, as the basis of our model to learn the patterns of bicycle user predict bike traffic. This GNN is included in the PyTorch Geometric library, which is designed for training and evaluating models on graph-structured data.
 
 ## Results
 
