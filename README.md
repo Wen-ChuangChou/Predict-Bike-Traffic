@@ -1,4 +1,4 @@
-# Predict Bike Traffic
+# Predicting Bike Traffic Using Graph Neural Networks: Integrating Residential Density, Amenity Distribution, and Street Networks 
 
 ## Motivation
 Cycling is considered to be more environmentally sustainable than the use of private vehicles and offers greater flexibility and accessibility compared to public transportation. Additionally, rising fuel costs and public transportation fares have further incentivized individuals to turn to bicycles as a mode of transportation. To accommodate this shift in travel patterns, authorities are keen to understand which factors drive individuals to choose bicycle transportation, how urban development can generate new demand for cycling, and how to promote bicycle usage through strategies such as the installation of dedicated bike infrastructure.
@@ -25,8 +25,7 @@ Here is an example of a buffer zone (60m) along the streets:
 Streets are interconnected, creating a graph-based data structure. For this project, each street segment is represented as a node, and each node is associated with a 43-dimensional feature vector. The feature vector includes segment length, street type, floor area, and the number of amenities. Intersections serve as edges, representing the connections between streets.
 
 ## Model architecture
-Because our data are structured as graphs containing multidimensional node features, a graph neural network (GNN) were implemented, specifically a Graph Attention Network, as the basis of our model to learn the patterns of bicycle user predict bike traffic. This GNN is included in the PyTorch Geometric library, which is designed for training and evaluating models on graph-structured data.
-
+Because our data are structured as graphs containing multidimensional node features, a graph neural network (GNN) were implemented, specifically a Graph Attention Network, as the basis of our model to learn what are the mobility patterns of bicycle users associate and predict bike traffic. This GNN is included in the PyTorch Geometric library, which is designed for training and evaluating models on graph-structured data.
 ## Results
 
 ## Reference
