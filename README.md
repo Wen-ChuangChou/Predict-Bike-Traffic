@@ -30,7 +30,7 @@ Because the data is structured as graphs with multidimensional node features, I 
 ## Results
 
 
-## Prospective work
+## Future work
 
 ## Reference
 1. P. Grubitzsch *et al.*, Technische Universität Dresden, Professur für Rechnernetze und Professur für Verkehrsökologie, 2021
