@@ -37,6 +37,9 @@ Because the data is structured as graphs with multidimensional node features, I 
 2. OpenStreetMap contributors. https://www.openstreetmap.org, 2023
 3. G. Boeing, “OSMnx: New methods for acquiring, constructing, analyzing, and visualizing complex street networks,” *Computers, Environment and Urban Systems*, vol. 65, pp. 126–139, Sep. 2017, doi: https://doi.org/10.1016/j.compenvurbsys.2017.05.004.
 4. P. Veličković *et al.*, “Graph Attention Networks,” *arXiv*:1710.10903, Feb. 2018, https://arxiv.org/abs/1710.10903
+5. R. Ying *et.al*, “GNNExplainer: Generating Explanations for Graph Neural Networks,” *arXiv*:1903.03894, Nov. 2019, https://arxiv.org/abs/1903.03894
+
+‌
 
 ‌
 
