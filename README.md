@@ -28,6 +28,8 @@ Streets are interconnected, creating a graph-based data structure. For this proj
 Because the data is structured as graphs with multidimensional node features, I implemented a graph neural network (GNN) as the foundation of our model to capture the mobility patterns associated with bicycle users and predict bike traffic. Specifically, we used a Graph Attention Network (GAT). In this project, the PyTorch Geometric library, designed for training and evaluating models on graph-structured data, was utilized to construct our model.  
 
 ## Results
+The model was trained to predict bike traffic based on the residential density, amenity distribution, and street networks in each individual city. For training, the feature vectors of every street were used as inputs, while the model outputted predictions for bike traffic on those streets. The objective was to minimize the errors between the predicted and actual bike traffic data. During training, the model was provided with the true traffic data for 80% of the streets (training data), and then it was tested on the remaining 20% of streets to predict the bike traffic (testing data). The following plot displays the results of models trained on three cities:
+![prediction](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/prediction.png?raw=true)  
 
 
 ## Future work
