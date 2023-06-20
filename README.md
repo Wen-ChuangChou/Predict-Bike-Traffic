@@ -28,10 +28,16 @@ Streets are interconnected, creating a graph-based data structure. For this proj
 Because the data is structured as graphs with multidimensional node features, I implemented a graph neural network (GNN) as the foundation of our model to capture the mobility patterns associated with bicycle users and predict bike traffic. Specifically, we used a Graph Attention Network (GAT). In this project, the PyTorch Geometric library, designed for training and evaluating models on graph-structured data, was utilized to construct our model.  
 
 ## Results
-The model was trained to predict bike traffic based on the residential density, amenity distribution, and street networks in each individual city. For training, the feature vectors of every street were used as inputs, while the model outputted predictions for bike traffic on those streets. The objective was to minimize the errors between the predicted and actual bike traffic data. During training, the model was provided with the true traffic data for 80% of the streets (training data), and then it was tested on the remaining 20% of streets to predict the bike traffic (testing data). The following plot displays the results of models trained on three cities:
+The model was trained to predict bike traffic based on the residential density, amenity distribution, and street networks in each individual city. During training, the feature vectors of every street served as inputs, and the model generated predictions for bike traffic on those streets. The objective was to minimize the discrepancies between the predicted and actual bike traffic data. The training procedure followed a semi-supervised learning approach, where the model was exposed to the true traffic data for 80% of the streets (training data), and then tested on the remaining 20% of streets to predict the bike traffic (testing data). The following plot illustrates the results obtained from models trained on three cities:  
 ![prediction](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/prediction.png?raw=true)  
 
+Prediction errors on street networks:  
+![errors on map](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/errors_on_maps.png?raw=true)  
 
+Next, we conducted tests to determine if a model trained on data from one city could also accurately predict bike traffic in another city. The following plot demonstrates the transferability of models trained on different cities. Each row in the plot represents the same model trained using data from a specific city, while each column represents the data from the same city tested using different models.  
+![model transferbility](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/transferbility.png?raw=true)
+
+ 
 ## Future work
 
 ## Reference
