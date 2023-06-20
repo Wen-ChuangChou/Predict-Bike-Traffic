@@ -40,7 +40,7 @@ Next, we conducted tests to determine if a model trained on data from one city c
 Finally, we employed GNNexplainer, an explainable machine learning technique, to identify the influential node features for predicting bike traffic, including residential density and individual amenities/facilities.
 ![feature importance](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/feature_importance.png?raw=true)
 
-GNNexplainer also provided insights into the number of neighboring streets required for accurate bike traffic predictions.
+GNNexplainer also provided insights into the number of neighboring streets required for accurate bike traffic predictions.  
 ![size importance](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/size_importance.png?raw=true)
 
 ## Future work
