@@ -37,8 +37,18 @@ Prediction errors on street networks:
 Next, we conducted tests to determine if a model trained on data from one city could also accurately predict bike traffic in another city. The following plot demonstrates the transferability of models trained on different cities. Each row in the plot represents the same model trained using data from a specific city, while each column represents the data from the same city tested using different models.  
 ![model transferbility](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/transferbility.png?raw=true)
 
- 
+Finally, we employed GNNexplainer, an explainable machine learning technique, to identify the influential node features for predicting bike traffic, including residential density and individual amenities/facilities.
+![feature importance](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/feature_importance.png?raw=true)
+
+GNNexplainer also provided insights into the number of neighboring streets required for accurate bike traffic predictions.  
+![size importance](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/size_importance.png?raw=true)
+
 ## Future work
+In fact, the graph data is structured based on the traces of bike traffic rather than the network of streets. Consequently, bike traffic along certain sections of streets is recorded on multiple lanes of the same street, resulting in redundant street segments (nodes) and intersections (edges).  
+
+The following figure provides an example where numerous traffic traces intersect at a large intersection, leading to an abundance of nodes and edges. These results increase the data size without adding additional information. Furthermore, small street segments within intersections (indicated by an arrow) often have a short length and provide limited information regarding residential density and amenity distribution within their buffer zones. However, these tiny segments labeled with high traffic volumes are usually connected to longer streets along blocks with similar traffic volumes, where more people reside and more amenities are located. Such contradictory data poses challenges for the training model. Therefore, it is necessary to preprocess the bike traffic to enhance the model's performance. For instance, an algorithm is required to identify bike traffic volumes within the same street segment across multiple traces or lanes and merge them into a single value. Please note that the blue dots in the following figures represent the connected points between street segments.  
+![data preprocesssing](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/data_preprocessing.png?raw=true)
+
 
 ## Reference
 1. P. Grubitzsch *et al.*, Technische Universität Dresden, Professur für Rechnernetze und Professur für Verkehrsökologie, 2021
