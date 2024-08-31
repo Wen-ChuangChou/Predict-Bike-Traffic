@@ -1,0 +1,6 @@
+mlruns/
+mlartifacts/
+utils/__pycache__
+data/mask
+data/image
+data/anima
