@@ -2,8 +2,8 @@ name: /data/horse/ws/chou-env/geo-bike
 channels:
   - pyg
   - pytorch
-  - conda-forge
   - nvidia
+  - conda-forge
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=main
@@ -42,10 +42,10 @@ dependencies:
   - brotli-python=1.0.9=py311h6a678d5_8
   - bzip2=1.0.8=h5eee18b_6
   - c-ares=1.19.1=h5eee18b_0
-  - ca-certificates=2024.7.2=h06a4308_0
+  - ca-certificates=2024.8.30=hbcca054_0
   - cachetools=5.3.3=py311h06a4308_0
   - cairo=1.16.0=hb05425b_5
-  - certifi=2024.7.4=py311h06a4308_0
+  - certifi=2024.8.30=pyhd8ed1ab_0
   - cffi=1.16.0=py311h5eee18b_1
   - cfitsio=3.470=h5893167_7
   - charset-normalizer=3.3.2=pyhd3eb1b0_0
@@ -114,6 +114,7 @@ dependencies:
   - intel-openmp=2023.1.0=hdb19cb5_46306
   - ipykernel=6.28.0=py311h06a4308_0
   - ipython=8.25.0=py311h06a4308_0
+  - ipywidgets=8.1.5=pyhd8ed1ab_0
   - itsdangerous=2.2.0=py311h06a4308_0
   - jedi=0.19.1=py311h06a4308_0
   - jinja2=3.1.4=py311h06a4308_0
@@ -122,6 +123,7 @@ dependencies:
   - json-c=0.16=h5eee18b_0
   - jupyter_client=8.6.0=py311h06a4308_0
   - jupyter_core=5.7.2=py311h06a4308_0
+  - jupyterlab_widgets=3.0.13=pyhd8ed1ab_0
   - kealib=1.5.0=hd940352_1
   - kiwisolver=1.4.4=py311h6a678d5_0
   - krb5=1.20.1=h143b758_1
@@ -210,7 +212,7 @@ dependencies:
   - numpy-base=1.26.4=py311hf175353_0
   - openh264=2.1.1=h4ff587b_0
   - openjpeg=2.5.2=he7f1fd0_0
-  - openssl=3.0.14=h5eee18b_0
+  - openssl=3.0.15=h5eee18b_0
   - opentelemetry-api=1.27.0=pyhd8ed1ab_0
   - opentelemetry-sdk=1.27.0=pyhd8ed1ab_0
   - opentelemetry-semantic-conventions=0.48b0=pyhd8ed1ab_0
@@ -300,6 +302,7 @@ dependencies:
   - websocket-client=1.8.0=py311h06a4308_0
   - werkzeug=3.0.3=py311h06a4308_0
   - wheel=0.43.0=py311h06a4308_0
+  - widgetsnbextension=4.0.13=pyhd8ed1ab_0
   - wrapt=1.14.1=py311h5eee18b_0
   - xerces-c=3.2.4=h6a678d5_1
   - xyzservices=2022.9.0=py311h06a4308_1
