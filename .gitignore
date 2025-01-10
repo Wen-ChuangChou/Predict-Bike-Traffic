@@ -5,3 +5,4 @@ data/mask
 data/image
 data/anima
 environment.yml
+requirements_local.txt
