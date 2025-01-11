@@ -4,5 +4,6 @@ utils/__pycache__
 data/mask
 data/image
 data/anima
+.ipynb_checkpoints
 environment.yml
 requirements_local.txt
